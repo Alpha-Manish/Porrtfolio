@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </radialGradient>
+    <linearGradient id="avatarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="50%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="140" fill="url(#bgGlow)" stroke="#1E293B" stroke-width="4" />
+  
+  <!-- AI / Code Grid Lines (Network background) -->
+  <path d="M 60 150 L 240 150 M 150 60 L 150 240" stroke="#1E293B" stroke-width="2" stroke-dasharray="4,4" />
+  <circle cx="150" cy="150" r="80" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="2,4" />
+  <circle cx="150" cy="150" r="110" fill="none" stroke="#1E293B" stroke-width="1.5" stroke-dasharray="2,6" />
+
+  <!-- Code Blocks Floating in Background -->
+  <rect x="50" y="90" width="45" height="6" rx="3" fill="#38BDF8" opacity="0.3" />
+  <rect x="50" y="102" width="60" height="6" rx="3" fill="#6366F1" opacity="0.2" />
+  <rect x="190" y="190" width="55" height="6" rx="3" fill="#38BDF8" opacity="0.3" />
+  <rect x="180" y="202" width="40" height="6" rx="3" fill="#6366F1" opacity="0.2" />
+
+  <!-- Silhouette / Avatar Body -->
+  <g filter="url(#shadow)">
+    <!-- Shoulders -->
+    <path d="M 70 260 C 70 220, 100 200, 150 200 C 200 200, 230 220, 230 260 Z" fill="url(#avatarGlow)" />
+    
+    <!-- Neck -->
+    <rect x="135" y="170" width="30" height="35" rx="5" fill="#E2E8F0" />
+    <path d="M 135 190 L 150 200 L 165 190" fill="#CBD5E1" />
+
+    <!-- Head / Face -->
+    <rect x="110" y="95" width="80" height="85" rx="40" fill="#F1F5F9" />
+    
+    <!-- Hair (Modern side-part / developer hair) -->
+    <path d="M 110 120 C 110 80, 190 80, 190 120 C 190 90, 110 90, 110 120 Z" fill="#0F172A" />
+    <path d="M 108 120 C 105 130, 115 140, 115 130 Z" fill="#0F172A" />
+    <path d="M 192 120 C 195 130, 185 140, 185 130 Z" fill="#0F172A" />
+    
+    <!-- Glasses (Professional look) -->
+    <rect x="117" y="125" width="28" height="18" rx="4" fill="none" stroke="#0F172A" stroke-width="3" />
+    <rect x="155" y="125" width="28" height="18" rx="4" fill="none" stroke="#0F172A" stroke-width="3" />
+    <line x1="145" y1="131" x2="155" y2="131" stroke="#0F172A" stroke-width="3" />
+    
+    <!-- Face details -->
+    <!-- Eyes -->
+    <circle cx="131" cy="134" r="2.5" fill="#0F172A" />
+    <circle cx="169" cy="134" r="2.5" fill="#0F172A" />
+    <!-- Smile -->
+    <path d="M 140 158 Q 150 166, 160 158" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Laptop / Screen Glow Overlay at the bottom -->
+  <path d="M 90 280 L 210 280 L 230 300 L 70 300 Z" fill="#1E293B" />
+  <rect x="100" y="274" width="100" height="6" rx="3" fill="#6366F1" opacity="0.8" />
+  <path d="M 115 274 L 185 274" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+</svg>

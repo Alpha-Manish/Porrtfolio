@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#0B0F19" />
+  <rect width="96" height="96" x="2" y="2" rx="18" fill="none" stroke="url(#glowGrad)" stroke-width="1.5" opacity="0.4" />
+  
+  <!-- Modern Code Brackets and Letter 'M' -->
+  <g filter="url(#glowFilter)">
+    <!-- Left Bracket -->
+    <path d="M 32 35 L 18 50 L 32 65" fill="none" stroke="url(#glowGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Right Bracket -->
+    <path d="M 68 35 L 82 50 L 68 65" fill="none" stroke="url(#glowGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Letter M -->
+    <path d="M 40 62 L 40 38 L 50 48 L 60 38 L 60 62" fill="none" stroke="#F3F4F6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

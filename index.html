@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Manish Prajapati | CS Engineering Student & AI Developer</title>
+  <meta name="description"
+    content="Portfolio of Manish Prajapati — Computer Science Engineering Student at Silver Oak University. AI & Python Developer. JEE AIR 9856. IEEE Member." />
+  <meta name="keywords"
+    content="Manish Prajapati, Portfolio, Computer Science, AI Developer, Python Developer, Software Developer, Silver Oak University, JEE" />
+  <meta name="author" content="Manish Prajapati" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (LinkedIn / Social Sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Manish Prajapati | CS Engineering Student & AI Developer" />
+  <meta property="og:description"
+    content="Passionate Computer Science Engineering student with expertise in AI, Python, and Software Development. JEE Qualified, IEEE Member." />
+  <meta property="og:image" content="profile.svg" />
+  <meta property="og:url" content="https://manishprajapati.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manish Prajapati | Developer Portfolio" />
+  <meta name="twitter:description" content="CS Engineering Student | AI & Python Developer | Software Developer" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ====== HEADER / NAVIGATION ====== -->
+  <header id="header">
+    <div class="container">
+      <a href="#hero" class="logo">
+        <span>&lt;</span>Manish<span>/&gt;</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation menu"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== HERO SECTION ====== -->
+    <section id="hero">
+      <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+      <div class="container">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <p class="hero-subtitle">👋 Hello, I'm</p>
+
+          <h1 class="hero-title">
+            Manish<br /><span>Prajapati</span>
+          </h1>
+
+          <div class="hero-role">
+            <span id="typing-text"></span>
+            <span class="typing-cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-desc">
+            A Computer Science Engineering student, AI builder, and Vibe Coder who develops real-world applications
+            using Python, AI agents, automation tools, and modern development platforms. Passionate about turning ideas
+            into products through rapid prototyping and AI-assisted development.
+          </p>
+
+          <div class="btn-group">
+            <a href="resume.pdf" download="Manish_Prajapati_Resume.pdf" class="btn btn-primary" id="btn-resume">
+              <!-- Download icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Resume
+            </a>
+            <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary" id="btn-github">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                style="width:18px;height:18px;">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/manish-prajapati-172128231" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary" id="btn-linkedin">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                style="width:18px;height:18px;">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-contact">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span>Follow me:</span>
+            <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/manish-prajapati-172128231" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="mailto:prajapatimanish39040@gmail.com" class="social-icon" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Image -->
+         
+        <div class="hero-image-wrapper">
+          <div class="profile-glow" aria-hidden="true"></div>
+          <div class="profile-circle">
+            <img src="passport.jpeg" alt="Manish Prajapati - Computer Science Engineering Student" />
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <!-- ====== ABOUT ME SECTION ====== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+
+        <div class="about-grid">
+          <div class="about-content reveal reveal-left">
+            <div class="badge">Who I Am</div>
+            <p>
+              I am a passionate <strong>Computer Science Engineering student</strong> at Silver Oak University,
+              Ahmedabad, with a strong interest in <strong>Artificial Intelligence</strong>, Python development, and
+              software engineering. I enjoy building practical and innovative solutions that solve real-world problems
+              through technology.
+            </p>
+            <p>
+              I have worked on multiple projects, including an <strong>AI-powered Regex-to-String Generator</strong>, a
+              To-Do List application, a Remote Operating Lift Management System, a Racing Game, and a Perfume E-commerce
+              Website. These projects have helped me strengthen my development skills across multiple domains.
+            </p>
+            <p>
+              As an <strong>IEEE member</strong> and <strong>JEE-qualified student (AIR 9856)</strong>, I am
+              continuously exploring new technologies and improving my technical expertise.
+            </p>
+          </div>
+
+          <div class="about-highlights reveal reveal-right">
+            <div class="highlight-card delay-100">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Silver Oak University</h4>
+                <p>B.Tech in Computer Science Engineering (2023–2027)</p>
+              </div>
+            </div>
+
+            <div class="highlight-card delay-200">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>JEE Qualified — AIR 9856</h4>
+                <p>All India Rank 9856 in Joint Entrance Examination</p>
+              </div>
+            </div>
+
+            <div class="highlight-card delay-300">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>IEEE Member</h4>
+                <p>Silver Oak University IEEE Student Branch Member</p>
+              </div>
+            </div>
+
+            <div class="highlight-card delay-400">
+              <div class="highlight-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <h4>Active Developer</h4>
+                <p>AI, Web & Game development across 5+ real-world projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS SECTION ====== -->
+    <section id="skills" class="section" >
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skills-category reveal delay-100">
+            <h3 class="skills-category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              Programming Languages
+            </h3>
+            <div class="skills-list">
+              <span class="skill-tag">🐍 Python</span>
+              <span class="skill-tag">⚙️ C++</span>
+              <span class="skill-tag">☕ Java</span>
+              <span class="skill-tag">🟨 JavaScript</span>
+            </div>
+          </div>
+
+          <!-- Web Development -->
+          <div class="skills-category reveal delay-200">
+            <h3 class="skills-category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              Web Development
+            </h3>
+            <div class="skills-list">
+              <span class="skill-tag">🌐 HTML5</span>
+              <span class="skill-tag">🎨 CSS3</span>
+              <span class="skill-tag">⚛️ Basic React</span>
+              <span class="skill-tag">📱 Frontend Dev</span>
+            </div>
+          </div>
+
+          <!-- Software Development -->
+          <div class="skills-category reveal delay-100">
+            <h3 class="skills-category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              Software Development
+            </h3>
+            <div class="skills-list">
+              <span class="skill-tag">🏗️ OOP</span>
+              <span class="skill-tag">🧩 Problem Solving</span>
+              <span class="skill-tag">📦 App Development</span>
+              <span class="skill-tag">🎮 Game Development</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="skills-category reveal delay-300">
+            <h3 class="skills-category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              Tools & Platforms
+            </h3>
+            <div class="skills-list">
+              <span class="skill-tag">🔧 Git</span>
+              <span class="skill-tag">🐙 GitHub</span>
+              <span class="skill-tag">💻 VS Code</span>
+              <span class="skill-tag">🚀 Antigravity AI</span>
+            </div>
+          </div>
+
+          <!-- AI Tools & Vibe Coding -->
+          <div class="skills-category reveal delay-400">
+            <h3 class="skills-category-title">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+              </svg>
+              AI Tools & Vibe Coding
+            </h3>
+
+            <div class="skills-list">
+              <span class="skill-tag">🚀 Antigravity AI</span>
+              <span class="skill-tag">▲ Vercel</span>
+              <span class="skill-tag">🎮 Godot Engine</span>
+              <span class="skill-tag">📝 Notion</span>
+              <span class="skill-tag">🤖 Nakin AI</span>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ====== PROJECTS SECTION ====== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Regex-to-String AI Generator -->
+          <article class="project-card reveal delay-100">
+            <div class="project-image">
+              <img src="Ai.png"  alt="Regex-to-String AI Generator" style="width:100%;height:100%;object-fit:cover;"
+  >
+            </div>
+        
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Java</span>
+                <span class="project-tag">Regex</span>
+                <span class="project-tag">AI</span>
+              </div>
+              <h3 class="project-title">Regex-to-String AI Generator</h3>
+              <p class="project-desc">Developed an AI-powered application that converts regular expressions into valid
+                strings using algorithm and automation tools.</p>
+              <div class="project-links">
+                <a href="https://github.com/Alpha-Manish/ai-agent" target="_blank" rel="noopener noreferrer"
+                  class="project-link code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View Code
+                </a>
+                <a href="https://ai-agent-regex-automation.vercel.app/" class="project-link live">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: To-Do List App -->
+          <article class="project-card reveal delay-200">
+            <div class="project-image">
+              <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.15" />
+                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0.1" />
+                  </linearGradient>
+                </defs>
+                <rect width="340" height="180" fill="url(#pg2)" />
+                <!-- Task Card mock -->
+                <rect x="50" y="25" width="240" height="130" rx="10" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+                <text x="70" y="50" font-family="Inter,sans-serif" font-size="13" fill="#F3F4F6" font-weight="700">My
+                  Tasks</text>
+                <!-- Task rows -->
+                <rect x="70" y="65" width="12" height="12" rx="3" fill="#10B981" opacity="0.9" />
+                <rect x="90" y="69" width="100" height="6" rx="3" fill="#9CA3AF" />
+                <line x1="90" y1="72" x2="190" y2="72" stroke="#4B5563" stroke-width="1.5" />
+                <rect x="70" y="89" width="12" height="12" rx="3" fill="none" stroke="#6366F1" stroke-width="2" />
+                <rect x="90" y="93" width="130" height="6" rx="3" fill="#F3F4F6" opacity="0.8" />
+                <rect x="70" y="113" width="12" height="12" rx="3" fill="none" stroke="#6366F1" stroke-width="2" />
+                <rect x="90" y="117" width="110" height="6" rx="3" fill="#F3F4F6" opacity="0.8" />
+                <!-- Plus Button -->
+                <circle cx="260" cy="143" r="14" fill="#6366F1" opacity="0.9" />
+                <text x="254" y="148" font-family="Inter,sans-serif" font-size="16" fill="#fff"
+                  font-weight="300">+</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">To-Do List Application</h3>
+              <p class="project-desc">Built a task management application with add, update, delete, and complete task
+                functionalities for efficient productivity tracking.</p>
+              <div class="project-links">
+                <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+                  class="project-link code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View Code
+                </a>
+                <a href="#" class="project-link live">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Lift Management System -->
+          <article class="project-card reveal delay-300">
+            <div class="project-image">
+              <img src="Lift.png"  alt="Remote Lift Management Dashboard" style="width:100%;height:100%;object-fit:cover;"
+  >
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Wix Vibe</span>
+                <span class="project-tag">Web Technologies</span>
+              </div>
+              <h3 class="project-title">Remote Lift Management System</h3>
+              <p class="project-desc">Developed a web-based remote lift management system featuring real-time monitoring, floor tracking, maintenance status management, and operational dashboards for efficient lift control.</p>
+              <div class="project-links">
+                <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+                  class="project-link code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View Code
+                </a>
+                <a href="https://my-site-31284f3t-manishprajapati390.wix-vibe-site.com" target="_blank" rel="noopener noreferrer" class="project-link live">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Racing Game -->
+          <article class="project-card reveal delay-100">
+            <div class="project-image">
+              <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pg4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#A855F7" stop-opacity="0.15" />
+                    <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1" />
+                  </linearGradient>
+                </defs>
+                <rect width="340" height="180" fill="url(#pg4)" />
+                <!-- Race Track -->
+                <rect x="50" y="60" width="240" height="70" rx="35" fill="none" stroke="#1E293B" stroke-width="25" />
+                <rect x="50" y="60" width="240" height="70" rx="35" fill="none" stroke="#374151" stroke-width="23" />
+                <!-- Dashed lane marker -->
+                <rect x="50" y="60" width="240" height="70" rx="35" fill="none" stroke="#4B5563" stroke-width="1"
+                  stroke-dasharray="10,8" />
+                <!-- Car 1 (Player) -->
+                <rect x="90" y="87" width="32" height="16" rx="4" fill="#6366F1" />
+                <circle cx="97" cy="103" r="4" fill="#1E293B" />
+                <circle cx="115" cy="103" r="4" fill="#1E293B" />
+                <!-- Car 2 (Opponent) -->
+                <rect x="165" y="73" width="28" height="14" rx="4" fill="#EF4444" opacity="0.8" />
+                <circle cx="171" cy="87" r="3.5" fill="#1E293B" />
+                <circle cx="187" cy="87" r="3.5" fill="#1E293B" />
+                <!-- Speed lines -->
+                <line x1="55" y1="90" x2="75" y2="90" stroke="#6366F1" stroke-width="2" opacity="0.6"
+                  stroke-linecap="round" />
+                <line x1="55" y1="96" x2="70" y2="96" stroke="#6366F1" stroke-width="2" opacity="0.4"
+                  stroke-linecap="round" />
+                <line x1="55" y1="102" x2="78" y2="102" stroke="#6366F1" stroke-width="2" opacity="0.5"
+                  stroke-linecap="round" />
+                <!-- Score display -->
+                <rect x="230" y="25" width="80" height="35" rx="6" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+                <text x="243" y="39" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">SCORE</text>
+                <text x="243" y="54" font-family="Inter,sans-serif" font-size="13" fill="#A855F7"
+                  font-weight="700">1250</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Game Dev</span>
+              </div>
+              <h3 class="project-title">Racing Game</h3>
+              <p class="project-desc">Created an interactive racing game with player controls, obstacle mechanics, and
+                real-time score tracking system.</p>
+              <div class="project-links">
+                <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+                  class="project-link code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View Code
+                </a>
+                <a href="#" class="project-link live">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Perfume E-commerce -->
+          <article class="project-card reveal delay-200">
+            <div class="project-image">
+              <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pg5" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F472B6" stop-opacity="0.15" />
+                    <stop offset="100%" stop-color="#A855F7" stop-opacity="0.1" />
+                  </linearGradient>
+                </defs>
+                <rect width="340" height="180" fill="url(#pg5)" />
+                <!-- Product Cards -->
+                <rect x="40" y="30" width="70" height="120" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+                <rect x="50" y="40" width="50" height="60" rx="4" fill="#1E293B" />
+                <!-- Bottle SVG simplified -->
+                <rect x="65" y="47" width="20" height="4" rx="2" fill="#F472B6" opacity="0.8" />
+                <rect x="62" y="51" width="26" height="35" rx="4" fill="#A855F7" opacity="0.7" />
+                <rect x="65" y="86" width="20" height="4" rx="2" fill="#F472B6" opacity="0.6" />
+                <rect x="58" y="108" width="44" height="6" rx="3" fill="#F3F4F6" opacity="0.8" />
+                <rect x="63" y="118" width="34" height="5" rx="2.5" fill="#F472B6" opacity="0.6" />
+                <!-- Product Card 2 -->
+                <rect x="135" y="30" width="70" height="120" rx="8" fill="#0F172A" stroke="#6366F1" stroke-width="2" />
+                <rect x="145" y="40" width="50" height="60" rx="4" fill="#1E293B" />
+                <rect x="160" y="47" width="20" height="4" rx="2" fill="#38BDF8" opacity="0.8" />
+                <rect x="157" y="51" width="26" height="35" rx="4" fill="#6366F1" opacity="0.7" />
+                <rect x="160" y="86" width="20" height="4" rx="2" fill="#38BDF8" opacity="0.6" />
+                <rect x="153" y="108" width="44" height="6" rx="3" fill="#F3F4F6" opacity="0.8" />
+                <rect x="158" y="118" width="34" height="5" rx="2.5" fill="#6366F1" opacity="0.6" />
+                <!-- Cart icon -->
+                <rect x="225" y="50" width="80" height="55" rx="8" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+                <text x="238" y="73" font-family="Inter,sans-serif" font-size="22" fill="#F472B6">🛒</text>
+                <text x="238" y="93" font-family="Inter,sans-serif" font-size="9" fill="#9CA3AF">Add to Cart</text>
+              </svg>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <h3 class="project-title">Perfume E-commerce Website</h3>
+              <p class="project-desc">Developed a responsive perfume shopping website with product listings, shopping
+                cart, and a user-friendly UI.</p>
+              <div class="project-links">
+                <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+                  class="project-link code">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  View Code
+                </a>
+                <a href="#" class="project-link live">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ====== CERTIFICATES SECTION ====== -->
+ <section id="certificates" class="section" >
+  <div class="container">
+    <h2 class="section-title reveal">My <span>Certificates</span></h2>
+
+    <div class="certificates-grid">
+
+      <!--Certificate 1 -->
+      <div class="certificate-card reveal delay-100">
+        <img src="AWS.png" alt="AWS Academy Introduction to Cloud Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>AWS Academy Introduction to Cloud (Semester 1)</h3>
+          <p>AWS Academy • 60 hrs • Oct 2024</p>
+          <a href="https://www.credly.com/go/M4Cvj5Xm" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="certificate-card reveal delay-200">
+        <img src="https://picsum.photos/600/400?random=2" alt="Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>AI Fundamentals</h3>
+          <p>IBM • 2025</p>
+          <a href="#" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- Certificate 3 -->
+      <div class="certificate-card reveal delay-300">
+        <img src="https://picsum.photos/600/400?random=3" alt="Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>Prompt Engineering</h3>
+          <p>DeepLearning.AI • 2025</p>
+          <a href="#" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- Certificate 4 -->
+      <div class="certificate-card reveal delay-100">
+        <img src="https://picsum.photos/600/400?random=4" alt="Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>Web Development</h3>
+          <p>Udemy • 2025</p>
+          <a href="#" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- Certificate 5 -->
+      <div class="certificate-card reveal delay-200">
+        <img src="https://picsum.photos/600/400?random=5" alt="Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>IEEE Workshop</h3>
+          <p>IEEE • 2025</p>
+          <a href="#" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- Certificate 6 -->
+      <div class="certificate-card reveal delay-300">
+        <img src="https://picsum.photos/600/400?random=6" alt="Certificate" class="certificate-img">
+        <div class="certificate-content">
+          <h3>AI Agents</h3>
+          <p>Professional Training • 2025</p>
+          <a href="#" class="certificate-btn">View Certificate</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+    <!-- ====== EDUCATION & ACHIEVEMENTS SECTION ====== -->
+    <section id="education" class="section" >
+      <div class="container">
+        <h2 class="section-title reveal">Education &amp; <span>Achievements</span></h2>
+
+        <div class="edu-ach-grid">
+          <!-- Education Timeline -->
+          <div class="reveal reveal-left">
+            <h3 style="font-size:1.5rem; margin-bottom:2rem; color: var(--text-secondary);">🎓 Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">B.Tech — Computer Science Engineering</h4>
+                    <span class="timeline-year">2023 – 2027</span>
+                  </div>
+                  <p class="timeline-institution">Silver Oak University, Ahmedabad</p>
+                  <div class="timeline-body">
+                    <p>Focused on software development, artificial intelligence, and practical project building.</p>
+                    <ul class="timeline-list">
+                      <li>Core subjects: Data Structures, Algorithms, DBMS, OS, Computer Networks</li>
+                      <li>Active IEEE Student Branch Member</li>
+                      <li>Developed 5+ real-world projects during coursework</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-header">
+                    <h4 class="timeline-title">JEE — Joint Entrance Examination</h4>
+                    <span class="timeline-year">2023</span>
+                  </div>
+                  <p class="timeline-institution">National Level Engineering Entrance</p>
+                  <div class="timeline-body">
+                    <p>Qualified JEE with <strong>All India Rank 9856</strong>, demonstrating strong proficiency in
+                      Mathematics, Physics, and problem-solving.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements Box -->
+          <div class="reveal reveal-right">
+            <div class="achievements-box">
+              <h3>🏆 Achievements</h3>
+              <div class="achievements-list">
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                  </div>
+                  <p class="achievement-text"><strong>JEE Qualified — AIR 9856</strong><br />All India Rank 9856 in
+                    Joint Entrance Examination</p>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+                    </svg>
+                  </div>
+                  <p class="achievement-text"><strong>IEEE Member</strong><br />Active member of Silver Oak University
+                    IEEE Student Branch</p>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                  </div>
+                  <p class="achievement-text"><strong>5+ Software Projects</strong><br />Built AI, Web, Game, and System
+                    development projects</p>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                      <path
+                        d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
+                    </svg>
+                  </div>
+                  <p class="achievement-text"><strong>AWS Cloud Member </strong><br /> Active member of Silver Oak University at
+                    AWS Cloud Club</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <!-- ====== CONTACT SECTION ====== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info">
+        <a href="mailto:prajapatimanish39040@gmail.com?subject=Job%20Opportunity&body=Hello%20Manish,%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+   class="contact-card reveal delay-100">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <span>prajapatimanish39040@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+918866298174" class="contact-card reveal delay-200">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.23h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.29 6.29l.62-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <span>+91 88662 98174</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer"
+              class="contact-card reveal delay-300">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <span>github.com/Alpha-Manish</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/manish-prajapati-172128231" target="_blank" rel="noopener noreferrer"
+              class="contact-card reveal delay-300">
+              <div class="contact-icon-box" style="background: rgba(56,189,248,0.08); color: var(--accent-secondary);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <span>linkedin.com/in/manish-prajapati-172128231</span>
+              </div>
+            </a>
+
+            <div class="contact-card reveal delay-400">
+              <div class="contact-icon-box" style="background: rgba(168,85,247,0.08); color: var(--accent-purple);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <span>Ahmedabad, Gujarat, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Send Message Form -->
+          <div class="contact-form-container reveal reveal-right">
+            <h3>Send a <span
+                style="background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Message</span>
+            </h3>
+            <p>Interested in working together or have a recruitment opportunity? I'd love to hear from you!</p>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder=" " required />
+                <label for="name" class="form-label">Your Name</label>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder=" " required />
+                <label for="email" class="form-label">Your Email</label>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" class="form-control" placeholder=" " />
+                <label for="subject" class="form-label">Subject</label>
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-control" placeholder=" " rows="5" required></textarea>
+                <label for="message" class="form-label">Your Message</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="logo">
+          <span>&lt;</span>Manish<span>/&gt;</span>
+        </a>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Alpha-Manish" target="_blank" rel="noopener noreferrer" class="social-icon"
+            aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/manish-prajapati-172128231" target="_blank" rel="noopener noreferrer"
+            class="social-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="mailto:prajapatimanish39040@gmail.com" class="social-icon" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <p class="footer-text">
+          Designed &amp; Built by <span>Manish Prajapati</span> &nbsp;|&nbsp; © 2026 All Rights Reserved
+        </p>
+        <p class="footer-text" style="font-size: 0.8rem; margin-top: -0.5rem;">
+          Computer Science Engineering Student · Silver Oak University, Ahmedabad
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+    <script src="https://unpkg.com/lucide@latest">
+    </script>
+    <script>
+    lucide.createIcons();
+   </script>
+   
+  <script src="script.js"></script>
+
+</body>
+
+</html>

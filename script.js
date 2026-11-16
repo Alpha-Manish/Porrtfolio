@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initActiveNavLinkOnScroll();
   initContactFormFeedback();
+  initCertificatesToggle();
 });
 
 /* ==========================================================================
@@ -376,6 +377,83 @@ function initContactFormFeedback() {
       }, 4000);
 
     }, 1500);
+  });
+}
+
+/* ==========================================================================
+   CERTIFICATES SHOW MORE / SHOW LESS TOGGLE
+   ========================================================================== */
+function initCertificatesToggle() {
+  const toggleBtn = document.getElementById('certificates-toggle-btn');
+  const certificatesGrid = document.querySelector('.certificates-grid');
+  if (!toggleBtn || !certificatesGrid) return;
+
+  const cards = Array.from(certificatesGrid.querySelectorAll('.certificate-card'));
+  const INITIAL_VISIBLE_COUNT = 6;
+
+  // If 6 or fewer certificates, hide the toggle button completely
+  if (cards.length <= INITIAL_VISIBLE_COUNT) {
+    if (toggleBtn.parentElement) {
+      toggleBtn.parentElement.style.display = 'none';
+    }
+    return;
+  }
+
+  const extraCards = cards.slice(INITIAL_VISIBLE_COUNT);
+  const btnText = toggleBtn.querySelector('.toggle-btn-text');
+  const btnBadge = toggleBtn.querySelector('.toggle-btn-badge');
+
+  // Ensure extra cards are initially hidden
+  extraCards.forEach(card => {
+    card.classList.add('certificate-card-hidden');
+  });
+
+  if (btnBadge) {
+    btnBadge.textContent = `+${extraCards.length} More`;
+  }
+
+  let isExpanded = false;
+
+  toggleBtn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    toggleBtn.setAttribute('aria-expanded', isExpanded.toString());
+    toggleBtn.classList.toggle('expanded', isExpanded);
+
+    if (isExpanded) {
+      // Reveal extra cards with staggered animation
+      extraCards.forEach((card, idx) => {
+        card.classList.remove('certificate-card-hidden');
+        card.classList.add('cert-revealed');
+        // Ensure scroll reveal active state is added so cards display immediately
+        card.classList.add('active');
+        card.style.animationDelay = `${idx * 60}ms`;
+      });
+
+      if (btnText) btnText.textContent = 'Show Less';
+      if (btnBadge) btnBadge.textContent = 'Collapse';
+    } else {
+      // Hide extra cards
+      extraCards.forEach(card => {
+        card.classList.add('certificate-card-hidden');
+        card.classList.remove('cert-revealed');
+        card.style.animationDelay = '';
+      });
+
+      if (btnText) btnText.textContent = 'Show More Certificates';
+      if (btnBadge) btnBadge.textContent = `+${extraCards.length} More`;
+
+      // Smooth scroll back to certificates section
+      const certSection = document.getElementById('certificates');
+      if (certSection) {
+        const headerOffset = 90;
+        const elementPosition = certSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
   });
 }
 

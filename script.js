@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNavLinkOnScroll();
   initContactFormFeedback();
   initCertificatesToggle();
+  initFloatingContact();
 });
 
 /* ==========================================================================
@@ -453,6 +454,65 @@ function initCertificatesToggle() {
           behavior: 'smooth'
         });
       }
+    }
+  });
+}
+
+/* ==========================================================================
+   FLOATING CONTACT POPUP WIDGET
+   ========================================================================== */
+function initFloatingContact() {
+  const widget = document.getElementById('floating-contact-widget');
+  const btn = document.getElementById('floating-contact-btn');
+  const card = document.getElementById('floating-contact-card');
+  const closeBtn = document.getElementById('floating-contact-close');
+
+  if (!widget || !btn || !card) return;
+
+  function openCard() {
+    widget.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    card.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeCard() {
+    widget.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    card.setAttribute('aria-hidden', 'true');
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (widget.classList.contains('open')) {
+      closeCard();
+    } else {
+      openCard();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeCard();
+    });
+  }
+
+  // Prevent clicks inside card from bubbling up and closing it
+  card.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // Clicking outside closes the card
+  document.addEventListener('click', (e) => {
+    if (widget.classList.contains('open') && !widget.contains(e.target)) {
+      closeCard();
+    }
+  });
+
+  // Pressing Escape closes the card
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && widget.classList.contains('open')) {
+      closeCard();
     }
   });
 }

@@ -222,22 +222,24 @@ textarea {
 
 #back-to-top {
   position: fixed;
-  bottom: 2rem;
+  bottom: 5.75rem;
   right: 2rem;
   width: 50px;
   height: 50px;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 99;
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-normal);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 #back-to-top.show {
@@ -246,15 +248,21 @@ textarea {
 }
 
 #back-to-top:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   border-color: var(--accent-secondary);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+  background-color: rgba(21, 31, 50, 0.95);
 }
 
 #back-to-top svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   stroke: var(--accent-secondary);
+  transition: transform 0.25s ease;
+}
+
+#back-to-top:hover svg {
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -2539,4 +2547,308 @@ section,
 footer{
   position: relative;
   z-index: 1;
+}
+
+/* ==========================================================================
+   FLOATING CONTACT WIDGET & POPUP
+   ========================================================================== */
+
+.floating-contact-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.floating-contact-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #38BDF8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4), 0 0 15px rgba(56, 189, 248, 0.25);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease;
+  outline: none;
+}
+
+.floating-contact-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.55), 0 0 22px rgba(56, 189, 248, 0.4);
+}
+
+.floating-contact-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pulsing subtle glow */
+.floating-btn-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(99, 102, 241, 0.5);
+  animation: contactPulse 2.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes contactPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.floating-contact-widget.open .floating-btn-pulse {
+  animation: none;
+  opacity: 0;
+}
+
+/* Floating Contact Icons (Toggle) */
+.contact-btn-icon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  position: absolute;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.contact-btn-icon.icon-chat {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.contact-btn-icon.icon-close {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+.floating-contact-widget.open .contact-btn-icon.icon-chat {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+}
+
+.floating-contact-widget.open .contact-btn-icon.icon-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Contact Popup Card */
+.floating-contact-card {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  width: 320px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 30px rgba(99, 102, 241, 0.2);
+  padding: 1.25rem;
+  transform-origin: bottom right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.92);
+  pointer-events: none;
+  transition: opacity 0.25s ease,
+              transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s;
+}
+
+.floating-contact-widget.open .floating-contact-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Card Header */
+.floating-contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.floating-contact-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.floating-contact-status .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+  animation: statusBlink 2s ease-in-out infinite;
+}
+
+@keyframes statusBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.floating-contact-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+}
+
+.floating-contact-close {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.floating-contact-close:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.floating-contact-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Contact List */
+.floating-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.floating-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+}
+
+.floating-contact-item:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+  transform: translateX(3px);
+}
+
+.floating-item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+  transition: background 0.25s, color 0.25s;
+}
+
+.floating-contact-item:hover .floating-item-icon {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}
+
+.floating-item-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.floating-item-text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.floating-item-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.floating-item-val {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.25s;
+}
+
+.floating-contact-item:hover .floating-item-val {
+  color: var(--accent-secondary);
+}
+
+.floating-item-arrow {
+  width: 16px;
+  height: 16px;
+  stroke: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s, stroke 0.2s;
+}
+
+.floating-contact-item:hover .floating-item-arrow {
+  stroke: var(--accent-secondary);
+  transform: translateX(3px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .floating-contact-widget {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .floating-contact-btn {
+    width: 46px;
+    height: 46px;
+  }
+  .floating-contact-card {
+    width: calc(100vw - 2.5rem);
+    max-width: 310px;
+    right: 0;
+    bottom: calc(100% + 12px);
+    padding: 1rem;
+  }
+  #back-to-top {
+    bottom: 4.65rem;
+    right: 1.25rem;
+    width: 46px;
+    height: 46px;
+  }
 }
